@@ -5,6 +5,15 @@ import (
 	"os"
 	"strconv"
 )
+
+type rectangle struct {
+	length  float64
+	breadth float64
+	color   string
+}
+
+
+
 func main(){
 	fmt.Println("Hello Shant")
 	
@@ -117,6 +126,7 @@ func main(){
 	arr2D := [2][3]int{{1, 2, 1}, {3, 4, 5}}
 	fmt.Println(arr2D)
 
+	
 	// Slicing
 	var s []int = arr1[1:3]
 	fmt.Println(s)
@@ -125,10 +135,21 @@ func main(){
 	fmt.Println("\n")
 
 
+	// struct
+	fmt.Println("Struct")
+	fmt.Println(rectangle{10.2, 5.3, "red"})
+
+
+
 	fmt.Printf("%v\n", 2511110)	
 	fmt.Printf(x)
 	fmt.Println(int1)
 	fmt.Println(int2)
 	fmt.Println(first_int + second_int, first_float)
 	fmt.Println(string1)
+
+
+	var w1 weight
+	w1 = 200000000000
+	fmt.Println(w1)
 }
