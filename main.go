@@ -1,7 +1,8 @@
 package main
+
 import (
-	"fmt"
 	"bufio"
+	"fmt"
 	"os"
 	"strconv"
 )
@@ -12,13 +13,11 @@ type rectangle struct {
 	color   string
 }
 
+func main() {
 
-
-func main(){
 	fmt.Println("Hello Shant")
-	
-	var age int64 = 18
 
+	var age int64 = 18
 
 	var string1 string = "My name is Shant"
 	var first_int, second_int int = 10, 20
@@ -27,7 +26,6 @@ func main(){
 	var int1 uint8 = 100
 	var int2 int8 = -100
 	var x string = fmt.Sprintf("Hello Golang  %v %t\n", 10, true)
-
 
 	// Taking input from user
 	scanner := bufio.NewScanner(os.Stdin)
@@ -38,26 +36,18 @@ func main(){
 	scanner.Scan()
 	year, _ := strconv.ParseInt(scanner.Text(), 10, 64)
 
-
 	fmt.Printf("you typed:   %q\n\n\n", input)
-	fmt.Printf("\nYou will be %d years old at the end of 2021\n", 2021 - year)
-
-
-
+	fmt.Printf("\nYou will be %d years old at the end of 2021\n", 2021-year)
 
 	// condition: if, else if, else
 	fmt.Println("if else")
-	if 2021 - year > age{
+	if 2021-year > age {
 		fmt.Println("You can ride\n")
-	} else if (2021 - year) < 18 && (2021 - year) > 14{
+	} else if (2021-year) < 18 && (2021-year) > 14 {
 		fmt.Println("You can ride with your parents\n")
-	} else{
+	} else {
 		fmt.Println("You can't ride alone\n")
 	}
-
-
-
-
 
 	fmt.Println("for loop")
 	// for loop
@@ -72,9 +62,6 @@ func main(){
 		fmt.Println(i)
 	}
 	fmt.Println("\n")
-
-
-
 
 	fmt.Println("switch version 1")
 	// switch
@@ -105,20 +92,18 @@ func main(){
 		fmt.Println("no case match\n")
 	}
 
-
-
 	// array[]
 	fmt.Println("array")
-	var arr	 [5]int
+	var arr [5]int
 	arr[4] = 100
 
-	arr1 :=	[5]int{1, 2, 3, 4, 5}
+	arr1 := [5]int{1, 2, 3, 4, 5}
 	fmt.Println(arr)
 	fmt.Println(arr1)
 	fmt.Printf("length of the arr is %d\n", len(arr))
-	
+
 	// we can't append an array, but we can do sth like below in a sliced array
-	var b []int = []int {10, 20, 30}
+	var b []int = []int{10, 20, 30}
 	b = append(b, 9999)
 	fmt.Println(b)
 
@@ -126,7 +111,6 @@ func main(){
 	arr2D := [2][3]int{{1, 2, 1}, {3, 4, 5}}
 	fmt.Println(arr2D)
 
-	
 	// Slicing
 	var s []int = arr1[1:3]
 	fmt.Println(s)
@@ -134,20 +118,16 @@ func main(){
 	fmt.Println(s[:cap(s)])
 	fmt.Println("\n")
 
-
 	// struct
 	fmt.Println("Struct")
 	fmt.Println(rectangle{10.2, 5.3, "red"})
 
-
-
-	fmt.Printf("%v\n", 2511110)	
+	fmt.Printf("%v\n", 2511110)
 	fmt.Printf(x)
 	fmt.Println(int1)
 	fmt.Println(int2)
-	fmt.Println(first_int + second_int, first_float)
+	fmt.Println(first_int+second_int, first_float)
 	fmt.Println(string1)
-
 
 	var w1 weight
 	w1 = 200000000000
