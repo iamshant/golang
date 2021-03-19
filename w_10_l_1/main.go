@@ -56,11 +56,23 @@ func features(rw http.ResponseWriter, r *http.Request) {
 }
 
 func request(rw http.ResponseWriter, r *http.Request) {
-	// r.ParseForm()
-	name := r.FormValue("name")
-	company := r.FormValue("company")
-	email := r.FormValue("email")
 
-	fmt.Println(name, company, email)
-	fmt.Fprintf(rw, `recieved`) //response
+	// method 1:
+
+	// name := r.FormValue("name")
+	// company := r.FormValue("company")
+	// email := r.FormValue("email")
+
+	// fmt.Println(name, company, email)
+	// fmt.Fprintf(rw, `recieved`) //response
+
+	// method 2:
+
+	r.ParseForm()
+
+	for key, val := range r.Form {
+		fmt.Println(key, val)
+	}
+
+	fmt.Fprintf(rw, `recieved`)
 }
